@@ -9,8 +9,9 @@
         <meta charset="UTF-8">
         <title>Minha Biografia</title>
 
-        <link rel="stylesheet" href="principal.css">
-        <link rel="stylesheet" href="switch.css">
+        <link rel="stylesheet" href="css/principal.css">
+        <link rel="stylesheet" href="css/switch.css">
+
     </head>
     <body>
         <nav>
@@ -41,7 +42,10 @@
         
         <div id="capa" class="background-ps">
             <div id="row-capa">
-                <img src="./IMGs/eudechapeu.jpg" alt="Foto do GitHub">
+                <img 
+                    src = "./imagens/eudechapeu.jpg" 
+                    alt = "Foto do GitHub"
+                />
 
                 <h1>Lorem Ipsum é simplesmente uma </h1>
             </div>
@@ -49,18 +53,29 @@
 
 
         <div id="biografia" class="background-sp">
-            <div>
-                <h2>texto</h2>
+            <div class = "grid-item texto">
+                <h2>
+                    Lorem Ipsum é simplesmente uma simulação de texto da indústria
+                    tipográfica e de impressos, e vem sendo utilizado desde o século XVI,
+                    quando um impressor desconhecido pegou uma bandeja de tipos e os
+                    embaralhou para fazer um livro de modelos de tipos.
+                </h2>
             </div>
 
-            <div>
-                <div>
-                    <img src="" alt="Logo da Instituição">
+            <div class = "grid-item content">
+                <div class = "grid-item-item1 item">
+                    <img 
+                        <!-- src = "https://source.unsplash.com/random/261x261"  -->
+                        alt = "Logo da Instituição"
+                    />
                     <p>Curso Técnico em Informática Integrado ao Ensino Médio</p>
                 </div>
 
-                <figure>
-                    <img src="" alt="Logo da Instituição">
+                <figure class = "grid-item-item2 item">
+                    <img 
+                        <!-- src = "https://source.unsplash.com/random/261x261"  -->
+                        alt = "Logo da Instituição"
+                    />
                     <figcaption>
                         Curso Técnico em Informática Integrado ao Ensino Médio
                     </figcaption>
@@ -69,15 +84,15 @@
         </div>
         
         <div id="portfólio" class="background-ps">
-            <div>Tecnologias
-                <select name="" id="tec-ops">
-
+            <div>
+                Tecnologias
+                <select 
+                    name = "" 
+                    id = "tec-ops">
                 </select>
-
             </div>
 
             <div>Projetos</div>
-
         </div>
 
 
@@ -91,11 +106,18 @@
                     <input type="number" name="" id="" placeholder="Contato">
                 </div>
 
-                <select name="" id="">
+                <select 
+                    name = "" 
+                    id = ""
+                />
 
                 </select>
                 <p>checkbox</p>
-                <textarea name="" id="" placeholder="Escreva sua necessidade..."></textarea>
+                <textarea 
+                    name = "" 
+                    id = "" 
+                    placeholder = "Escreva sua necessidade..."
+                ></textarea>
 
                 <button type="submit">ENVIAR</button>
             </form>

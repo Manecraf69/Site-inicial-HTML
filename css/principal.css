@@ -5,6 +5,10 @@
     --primary-color: #000;
     --secondary-color: #6200ee;
     --tertiary-color: #fff;
+
+    --alt-secondary-color: rgb(153, 0, 248, .4);
+    --alt-tertiary-color: rgba(255,255,255, .4);
+
 }
 
 body {
