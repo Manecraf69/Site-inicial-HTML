@@ -1,95 +1,102 @@
 :root {
-    font-size: 62.5%;
-    box-sizing: border-box;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
 
-    --primary-color: #000;
-    --secondary-color: #6200ee;
-    --tertiary-color: #fff;
+.darkmode {
+  --primary-color: #000;
+  --secondary-color: #6200ee;
+  --tertiary-color: #fff;
+}
 
-    --alt-secondary-color: rgb(153, 0, 248, .4);
-    --alt-tertiary-color: rgba(255,255,255, .4);
-
+.lightmode {
+  --primary-color: #fff;
+  --secondary-color: #6200ee;
+  --tertiary-color: #000;
 }
 
 body {
-    margin: 0;
-    color: var(--tertiary-color);
+  margin: 0;
+  color: var(--tertiary-color);
 }
 
-.background-ps{
-    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+.background-ps {
+  background-image: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
 }
 
 /* .background-sp {} */
 
 h1 {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 h2 {
-    font-size: 35px;
-    color: var(--tertiary-color);
+  font-size: 35px;
+  color: var(--tertiary-color);
 }
 
 /* Estilização do Menu */
 
 nav {
-    display: inline-block;
-    width: 100%;
-    position: fixed;
+  display: inline-block;
+  width: 100%;
+  position: fixed;
 
-    background-color: rgba(255, 255, 255, .1);
-    box-shadow: #fff 0 0 15px;
-    z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: #fff 0 0 15px;
+  z-index: 1;
 }
 
 ul {
-    display: inline-block;
-    margin: 0;
+  display: inline-block;
+  margin: 0;
 }
 
 li {
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 30px;
-    transition: color, background-color .1s;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 30px;
+  transition: color, background-color 0.1s;
 }
 
-li:hover{
-    /* color: var(--primary-color); */
-    background-color: var(--second-color);
+li:hover {
+  /* color: var(--primary-color); */
+  background-color: var(--second-color);
 }
 
 /* Estilização da Capa de Apresentação */
 
 #capa {
-    height: 1080px;
+  height: 1080px;
 }
 
 #capa #row-capa {
-    position: absolute;
-    margin: 280px 0 0 316px;
+  position: absolute;
+  margin: 280px 0 0 316px;
 
-    /* background-color: aqua; */
+  /* background-color: aqua; */
 }
 
-
 #row-capa img {
-    display: inline-block;
-    height: 400px;
-    width: 400px;
+  display: inline-block;
+  height: 400px;
+  width: 400px;
 
-    border-radius: 50%;
-    border: 2px solid var(--tertiary-color);
-    box-shadow: var(--tertiary-color) 0 0 15px;
+  border-radius: 50%;
+  border: 2px solid var(--tertiary-color);
+  box-shadow: var(--tertiary-color) 0 0 15px;
 }
 
 #row-capa h1 {
-    display: inline-block;
-    color: var(--tertiary-color);
+  display: inline-block;
+  color: var(--tertiary-color);
 
-    position: relative;
+  position: relative;
 
-    top: -180px;
-    left: 50px;
+  top: -180px;
+  left: 50px;
 }
