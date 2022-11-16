@@ -76,7 +76,8 @@
     </div>
 
     <div id="biografia" class="background-sp">
-      <div class="grid-item texto">
+      <div class="grid-item text">
+        <!-- "texto" faz a estilização -->
         <h2>
           Lorem Ipsum é simplesmente uma simulação de texto da indústria
           tipográfica e de impressos, e vem sendo utilizado desde o século XVI,
@@ -87,32 +88,119 @@
 
       <div class="grid-item content">
         <div class="grid-item-item1 item">
-          <img
-            rc="https://source.unsplash.com/random/261x261"
-            alt="Logo da Instituição"
-          />
+          <!-- "item" faz a estilização -->
+          <img src="./imagens/ifc.svg.png" alt="Logo da Instituição" />
           <p>Curso Técnico em Informática Integrado ao Ensino Médio</p>
         </div>
 
         <figure class="grid-item-item2 item">
-          <img
-            src="https://source.unsplash.com/random/261x261"
-            alt="Logo da Instituição"
-          />
+          <!-- "item" faz a estilização -->
+          <img src="./imagens/brasao_site_ufsc.svg" alt="Logo da Instituição" />
           <figcaption>
-            Curso Técnico em Informática Integrado ao Ensino Médio
+            <p>Curso Técnico em Informática Integrado ao Ensino Médio</p>
           </figcaption>
         </figure>
       </div>
     </div>
 
-    <div id="portfólio" class="background-ps">
-      <div>
-        Tecnologias
-        <select name="" id="tec-ops"></select>
+    <div id="portfolio" class="background-ps">
+      <div id="tecnologias">
+        <select name="" id="tec-ops">
+          <option value="">Tecnologia</option>
+          <option value="">Sustentabilidade</option>
+          <option value="">Educação</option>
+          <option value="">Empreendedorismo</option>
+        </select>
+
+        <div class="row">
+          <div class="col">
+            <div class="topo">
+              <input type="checkbox" name="HTML" />
+              <label for="HTML">HTML</label>
+            </div>
+            <div>
+              <input type="checkbox" name="CSS" />
+              <label for="CSS">CSS</label>
+            </div>
+          </div>
+
+          <div class="col center">
+            <div class="topo">
+              <input type="checkbox" name="JS" />
+              <label for="JS">JavaScript</label>
+            </div>
+            <div>
+              <input type="checkbox" name="Vue" />
+              <label for="Vue">Vue JS</label>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="topo">
+              <input type="checkbox" name="Python" />
+              <label for="Python">Python</label>
+            </div>
+            <div>
+              <input type="checkbox" name="Django" />
+              <label for="Django">Django</label>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div>Projetos</div>
+      <div id="projetos">
+        <h2>Projetos</h2>
+
+        <div id="slider">
+          <figure class="slide">
+            <img src="./imagens/pequena.jpg" alt="" />
+            <figcaption>
+              <h2>Portfólio</h2>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <p>
+                Este é trabalho para revisar os conteúdos iniciais de
+                Desenvolvimento Web I.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="slide">
+            <img src="./imagens/pequena.jpg" alt="" />
+            <figcaption>
+              <h2>Portfólio</h2>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <p>
+                Este é trabalho para revisar os conteúdos iniciais de
+                Desenvolvimento Web I.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="slide">
+            <img src="./imagens/pequena.jpg" alt="" />
+            <figcaption>
+              <h2>Portfólio</h2>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <p>
+                Este é trabalho para revisar os conteúdos iniciais de
+                Desenvolvimento Web I.
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
 
     <div id="contato" class="background-sp">
