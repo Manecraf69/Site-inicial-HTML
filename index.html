@@ -8,14 +8,11 @@
     <meta charset="UTF-8" />
     <title>Minha Biografia</title>
 
-    <link
-      rel="stylesheet"
-      href="https://     www.w3schools.com/w3css/4/w3.css"
-    />
-    <link rel="stylesheet" href="css/principal.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/switch.css" />
+    <link rel="stylesheet" href="css/slide.css" />
 
-    <script>
+    <script defer>
       function tempo() {
         const body = document.getElementById("body");
         const text = document.getElementById("dark-text");
@@ -42,31 +39,8 @@
           text.innerText = "Dark Mode";
         }
       }
-
-      // Slide
-
-      var slideIndex = 1;
-      showDivs(slideIndex);
-
-      function plusDivs(n) {
-        showDivs((slideIndex += n));
-      }
-
-      function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        if (n > x.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = x.length;
-        }
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        x[slideIndex - 1].style.display = "block";
-      }
     </script>
+    <script src="slideshow.js" defer></script>
   </head>
   <body id="body" class="darkmode" onload="tempo()">
     <nav>
@@ -177,65 +151,217 @@
       </div>
 
       <div id="projetos">
-        <h2>Projetos</h2>
+        <h2 style="color: var(--tertiary-color)">Projetos</h2>
 
-        <div id="slider">
-          <figure class="mySlides">
-            <img src="./imagens/pequena.jpg" alt="" />
-            <figcaption>
-              <h2>Portfólio</h2>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-              </ul>
-              <p>
-                Este é trabalho para revisar os conteúdos iniciais de
-                Desenvolvimento Web I.
-              </p>
-            </figcaption>
-          </figure>
-
-          <figure class="mySlides">
-            <img src="./imagens/pequena.jpg" alt="" />
-            <figcaption>
-              <h2>Portfólio</h2>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-              </ul>
-              <p>
-                Este é trabalho para revisar os conteúdos iniciais de
-                Desenvolvimento Web II.
-              </p>
-            </figcaption>
-          </figure>
-
-          <figure class="mySlides">
-            <img src="./imagens/pequena.jpg" alt="" />
-            <figcaption>
-              <h2>Portfólio</h2>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-              </ul>
-              <p>
-                Este é trabalho para revisar os conteúdos iniciais de
-                Desenvolvimento Web III.
-              </p>
-            </figcaption>
-          </figure>
-          <div class="w3-center">
-            <button class="w3-button w3-display-left" onclick="plusDivs(-1)">
-              &#10094;
+        <div class="container">
+          <div class="carousel-view">
+            <!-- Botão de voltar -->
+            <button id="prev-btn" class="prev-btn">
+              <svg viewBox="0 0 512 512" width="20" title="chevron-circle-left">
+                <path
+                  d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"
+                />
+              </svg>
             </button>
-            <button class="w3-button w3-display-right" onclick="plusDivs(+1)">
-              &#10095;
+
+            <!-- Items do slide -->
+            <div id="item-list" class="item-list">
+              <figure id="item-slide" class="item-slide">
+                <img src="./imagens/pequena.jpg" />
+                <figcaption>
+                  <h2>Portfólio</h2>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <p>
+                    Este é trabalho para revisar os conteúdos iniciais de
+                    Desenvolvimento Web I.
+                  </p>
+                </figcaption>
+              </figure>
+
+              <figure id="item-slide" class="item-slide">
+                <img src="./imagens/pequena.jpg" />
+
+                <figcaption>
+                  <h2>Portfólio</h2>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <p>
+                    Este é trabalho para revisar os conteúdos iniciais de
+                    Desenvolvimento Web II.
+                  </p>
+                </figcaption>
+              </figure>
+
+              <figure id="item-slide" class="item-slide">
+                <img src="./imagens/pequena.jpg" />
+
+                <figcaption>
+                  <h2>Portfólio</h2>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <p>
+                    Este é trabalho para revisar os conteúdos iniciais de
+                    Desenvolvimento Web III.
+                  </p>
+                </figcaption>
+              </figure>
+
+              <figure id="item-slide" class="item-slide">
+                <img src="./imagens/pequena.jpg" />
+
+                <figcaption>
+                  <h2>Portfólio</h2>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <p>
+                    Este é trabalho para revisar os conteúdos iniciais de
+                    Desenvolvimento Web III.
+                  </p>
+                </figcaption>
+              </figure>
+
+              <figure id="item-slide" class="item-slide">
+                <img src="./imagens/pequena.jpg" />
+
+                <figcaption>
+                  <h2>Portfólio</h2>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <p>
+                    Este é trabalho para revisar os conteúdos iniciais de
+                    Desenvolvimento Web III.
+                  </p>
+                </figcaption>
+              </figure>
+
+              <figure id="item-slide" class="item-slide">
+                <img src="./imagens/pequena.jpg" />
+
+                <figcaption>
+                  <h2>Portfólio</h2>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <p>
+                    Este é trabalho para revisar os conteúdos iniciais de
+                    Desenvolvimento Web III.
+                  </p>
+                </figcaption>
+              </figure>
+
+              <figure id="item-slide" class="item-slide">
+                <img src="./imagens/pequena.jpg" />
+                <figcaption>
+                  <h2>Portfólio</h2>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <p>
+                    Este é trabalho para revisar os conteúdos iniciais de
+                    Desenvolvimento Web III.
+                  </p>
+                </figcaption>
+              </figure>
+
+              <figure id="item-slide" class="item-slide">
+                <img src="./imagens/pequena.jpg" />
+                <figcaption>
+                  <h2>Portfólio</h2>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <p>
+                    Este é trabalho para revisar os conteúdos iniciais de
+                    Desenvolvimento Web III.
+                  </p>
+                </figcaption>
+              </figure>
+
+              <figure id="item-slide" class="item-slide">
+                <img src="./imagens/pequena.jpg" />
+                <figcaption>
+                  <h2>Portfólio</h2>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <p>
+                    Este é trabalho para revisar os conteúdos iniciais de
+                    Desenvolvimento Web III.
+                  </p>
+                </figcaption>
+              </figure>
+
+              <figure id="item-slide" class="item-slide">
+                <img src="./imagens/pequena.jpg" />
+                <figcaption>
+                  <h2>Portfólio</h2>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <p>
+                    Este é trabalho para revisar os conteúdos iniciais de
+                    Desenvolvimento Web III.
+                  </p>
+                </figcaption>
+              </figure>
+
+              <figure id="item-slide" class="item-slide">
+                <img src="./imagens/pequena.jpg" />
+                <figcaption>
+                  <h2>Portfólio</h2>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <p>
+                    Este é trabalho para revisar os conteúdos iniciais de
+                    Desenvolvimento Web III.
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+
+            <!-- Botão de prosseguir -->
+            <button id="next-btn" class="next-btn">
+              <svg
+                viewBox="0 0 512 512"
+                width="20"
+                title="chevron-circle-right"
+              >
+                <path
+                  d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
-        
       </div>
     </div>
 

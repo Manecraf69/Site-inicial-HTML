@@ -7,14 +7,17 @@
   --primary-color: #000;
   --secondary-color: #6200ee;
   --tertiary-color: #fff;
+  --Wfume: rgba(255, 255, 255, 0.4);
+  --Bfume: rgba(0, 0, 0, 0.4);
 }
 
 .lightmode {
   --primary-color: #fff;
   --secondary-color: #6200ee;
   --tertiary-color: #000;
+  --Bfume: rgba(255, 255, 255, 0.4);
+  --Wfume: rgba(0, 0, 0, 0.4);
 }
-
 
 body {
   margin: 0;
@@ -34,13 +37,20 @@ p {
 }
 
 .background-ps {
-  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background-image: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
 }
 
 .background-sp {
-  background-image: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+  background-image: linear-gradient(
+    to left,
+    var(--primary-color),
+    var(--secondary-color)
+  );
 }
-
 
 /* Estilização do Menu */
 
@@ -111,7 +121,7 @@ li:hover {
   grid-template-rows: 10rem 1fr;
   grid-template-columns: 20rem 1fr 20rem;
   grid-area: content;
-  
+
   row-gap: 15rem;
   padding-top: 14rem;
 
@@ -161,14 +171,13 @@ li:hover {
   box-shadow: var(--tertiary-color) 0 0 5px;
 }
 
-
 .item {
   padding: 1rem;
   background-color: var(--Bfume);
   border-radius: 1.2rem 0 1.2rem 0;
   box-shadow: var(--tertiary-color) 0 0 5px;
   color: var(--tertiary-color);
-  transition: color, background-color .4s;
+  transition: color, background-color 0.4s;
 }
 
 .item:hover {
@@ -188,16 +197,14 @@ figure {
   margin-bottom: 1rem;
 }
 
-
 /* # Portfólio # */
 
 #portfolio {
   display: flex;
   flex-direction: column;
-  justify-content:space-evenly; /* Alinhamento na horizontal topo e baixo */
-  align-items: center;  /* Alinhamento na vertical esquerda e direita*/
+  justify-content: space-evenly; /* Alinhamento na horizontal topo e baixo */
+  align-items: center; /* Alinhamento na vertical esquerda e direita*/
   height: 100rem;
-  
 }
 
 #tecnologias {
@@ -253,15 +260,15 @@ figure {
   margin-bottom: 1rem;
 }
 
-/* ## Projetos ## */
+/* Projetos */
 
 #projetos {
   width: 90%;
-  height: 50rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 5em;
 
   background-color: var(--Bfume);
 }
@@ -270,27 +277,15 @@ figure {
   margin: 3rem auto 4rem;
 }
 
-#projetos #slider {
-  display: flex;
-  align-items: center;
-}
-
-#projetos .slide {
-  margin: auto 1rem;
-}
-
 #projetos img {
   width: 100%;
   border-radius: 1.2rem 0;
 }
 
 #projetos figcaption {
-  position: relative;    
+  position: relative;
 
-  top: -34rem;
-
-  height: 31.8rem;
-  width: 96.5%;
+  top: -26rem;
 
   display: flex;
   flex-direction: column;
@@ -303,10 +298,10 @@ figure {
   background-color: var(--Wfume);
   padding: 1rem;
   opacity: 0;
-  transition: opacity .4s;
+  transition: opacity 0.4s;
 }
 
-#projetos figcaption:hover{
+#projetos figcaption:hover {
   opacity: 1;
 }
 

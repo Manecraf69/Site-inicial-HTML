@@ -1,0 +1,52 @@
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.carousel-view {
+  border-radius: 1em;
+  background-color: var(--Wfume);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s ease-in;
+}
+
+.carousel-view .item-list {
+  max-width: 70vw;
+  padding: 10px 10px;
+  display: flex;
+  gap: 48px;
+  scroll-behavior: smooth;
+  transition: all 0.25s ease-in;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.item-list::-webkit-scrollbar {
+  display: none;
+}
+
+.prev-btn {
+  background: none;
+  cursor: pointer;
+}
+
+.next-btn {
+  cursor: pointer;
+}
+
+.item-slide {
+  scroll-snap-align: center;
+  height: 268px;
+}
