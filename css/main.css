@@ -1,4 +1,5 @@
 :root {
+  scroll-behavior: smooth;
   font-size: 62.5%;
   box-sizing: border-box;
 }
@@ -52,16 +53,33 @@ p {
   );
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  margin: auto 18rem;
+}
+
+.topo {
+  margin-bottom: 1rem;
+}
+
 /* Estilização do Menu */
 
 nav {
-  display: inline-block;
+  z-index: 1;
   width: 100%;
   position: fixed;
-
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: #fff 0 0 15px;
-  z-index: 1;
+  display: inline-block;
+  box-shadow: var(--tertiary-color) 0 0 15px;
+  background-color: rgba(98, 0, 238, 0.1);
 }
 
 ul {
@@ -70,15 +88,16 @@ ul {
 }
 
 li {
-  text-decoration: none;
+  padding: 1rem 3rem;
   display: inline-block;
-  padding: 10px 30px;
-  transition: color, background-color 0.1s;
+  text-decoration: none;
+  transition: color, background-color 0.3s;
+  border-radius: 1em;
 }
 
 li:hover {
-  /* color: var(--primary-color); */
-  background-color: var(--second-color);
+  color: var(--tertiary-color);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 /* Estilização da Capa de Apresentação */
@@ -232,16 +251,6 @@ figure {
   -moz-appearance: none;
 }
 
-#tecnologias .row {
-  display: flex;
-  flex-direction: row;
-}
-
-#tecnologias .col {
-  display: flex;
-  flex-direction: column;
-}
-
 #tecnologias input {
   width: 2rem;
   height: 2rem;
@@ -250,14 +259,6 @@ figure {
 #tecnologias label {
   font-size: 2.2rem;
   color: var(--tertiary-color);
-}
-
-#tecnologias .center {
-  margin: auto 18rem;
-}
-
-#tecnologias .topo {
-  margin-bottom: 1rem;
 }
 
 /* Projetos */

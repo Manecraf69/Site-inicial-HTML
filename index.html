@@ -9,6 +9,7 @@
     <title>Minha Biografia</title>
 
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/form.css" />
     <link rel="stylesheet" href="css/switch.css" />
     <link rel="stylesheet" href="css/slide.css" />
 
@@ -46,24 +47,25 @@
     <nav>
       <div id="dark-light">
         <p id="dark-text">Dark Mode</p>
-        <!-- Rounded switch -->
 
+        <!-- Rounded switch -->
         <label class="switch">
           <input type="checkbox" onclick="trocarTema()" />
           <span class="slider round"></span>
         </label>
       </div>
+
       <ul>
         <a href="#"
           ><li><h2>Home</h2></li></a
         >
-        <a href="#"
+        <a href="#biografia"
           ><li><h2>Biografia</h2></li></a
         >
-        <a href="#"
+        <a href="#portfolio"
           ><li><h2>Portfólio</h2></li></a
         >
-        <a href="#"
+        <a href="#contato"
           ><li><h2>Contato</h2></li></a
         >
       </ul>
@@ -365,17 +367,165 @@
       </div>
     </div>
 
+    <!-- <div id="contato" class="background-sp">
+      <form action="">
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your name.."
+        />
+
+        <label for="lname">Last Name</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name.."
+        />
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+
+        <label for="subject">Subject</label>
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Write something.."
+          style="height: 200px"
+        ></textarea>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div> -->
+
     <div id="contato" class="background-sp">
-      <form action="#">
-        <div>
-          <input type="text" placeholder="Nome" />
-          <input type="text" placeholder="Sobrenome" />
-          <input type="email" name="" id="" placeholder="E-mail" />
-          <input type="number" name="" id="" placeholder="Contato" />
+      <form class="container" action="#">
+        <div class="row">
+          <div class="col">
+            <input
+              class="input input-first_name"
+              type="text"
+              placeholder="Nome"
+              required
+            />
+            <input
+              class="input input-last_name"
+              type="text"
+              placeholder="Sobrenome"
+            />
+          </div>
+          <div class="col">
+            <input
+              class="input input-email"
+              type="email"
+              name=""
+              id=""
+              placeholder="E-mail"
+              required
+            />
+            <input
+              class="input input-phone"
+              type="number"
+              name=""
+              id=""
+              placeholder="Contato"
+              required
+            />
+          </div>
         </div>
 
-        <select name="" id=""></select>
-        <p>checkbox</p>
+        <!-- <div id="portfolio" class="background-ps">
+          <div id="tecnologias">
+            <select name="" id="tec-ops">
+              <option value="">Tecnologia</option>
+              <option value="">Sustentabilidade</option>
+              <option value="">Educação</option>
+              <option value="">Empreendedorismo</option>
+            </select>
+
+            <div class="row">
+              <div class="col">
+                <div class="topo">
+                  <input type="checkbox" name="HTML" />
+                  <label for="HTML">HTML</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="CSS" />
+                  <label for="CSS">CSS</label>
+                </div>
+              </div>
+
+              <div class="col center">
+                <div class="topo">
+                  <input type="checkbox" name="JS" />
+                  <label for="JS">JavaScript</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="Vue" />
+                  <label for="Vue">Vue JS</label>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="topo">
+                  <input type="checkbox" name="Python" />
+                  <label for="Python">Python</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="Django" />
+                  <label for="Django">Django</label>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div> -->
+
+        <select name="" id="">
+          <option value="a">a</option>
+          <option value="b">b</option>
+          <option value="c">c</option>
+          <option value="d">d</option>
+        </select>
+        <div class="row">
+          <div class="col">
+            <div class="topo">
+              <input type="checkbox" name="HTML" />
+              <label for="HTML">HTML</label>
+            </div>
+            <div>
+              <input type="checkbox" name="CSS" />
+              <label for="CSS">CSS</label>
+            </div>
+          </div>
+
+          <div class="col center">
+            <div class="topo">
+              <input type="checkbox" name="JS" />
+              <label for="JS">JavaScript</label>
+            </div>
+            <div>
+              <input type="checkbox" name="Vue" />
+              <label for="Vue">Vue JS</label>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="topo">
+              <input type="checkbox" name="Python" />
+              <label for="Python">Python</label>
+            </div>
+            <div>
+              <input type="checkbox" name="Django" />
+              <label for="Django">Django</label>
+            </div>
+          </div>
+        </div>
         <textarea
           name=""
           id=""
